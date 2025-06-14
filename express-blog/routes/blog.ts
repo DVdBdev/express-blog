@@ -6,12 +6,12 @@ blogRouter.get("/", (req, res) => {
     res.render("list");
 });
 
-blogRouter.get("/:id", (req, res) => {
-    res.render("view");
-});
-
 blogRouter.get("/new", (req, res) => {
     res.render("new");
+});
+
+blogRouter.get("/:id", (req, res) => {
+    res.render("view");
 });
 
 blogRouter.get("/:id/edit", (req, res) => {
