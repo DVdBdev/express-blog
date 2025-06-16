@@ -51,6 +51,55 @@ body {
     border: 2px solid var(--secondary-text);
 }
 
+@media (max-width: 527px) {
+    body {
+        background: var(--accent-color);
+        padding: 0 !important; /* Remove all padding */
+        display: flex;
+        min-height: 100vh;
+        margin: 0; /* Remove default margins */
+    }
+
+    .login-wrapper {
+        width: 100%;
+        height: 100vh; /* Full viewport height */
+        max-width: 100%;
+        border-radius: 0; /* Remove rounded corners */
+        padding: 0 1.5rem; /* Horizontal padding only */
+        margin: 0; /* Remove margins */
+        border: none; /* Remove border (optional) */
+        box-shadow: none; /* Remove shadow (optional) */
+        overflow-y: auto; /* Allow scrolling if content overflows */
+    }
+
+    /* Adjust title section */
+    .title {
+        padding-top: 3rem;
+        padding-bottom: 1rem;
+        margin-bottom: 1.5rem;
+        border-radius: 0; /* Remove rounded corners */
+    }
+
+    /* Footer adjustments */
+    .site-footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+    }
+
+    /* Ensure inputs/buttons don't overflow */
+    .input-container, .login-button {
+        max-width: 100%;
+    }
+
+    .register-text{
+     padding-top: 1.6rem;
+}
+     button{
+          margin-top: 1.6rem;
+     }
+}
 .login-wrapper .title{
      text-align: center;
      font-size: 1.3rem;
@@ -271,3 +320,42 @@ body {
         padding: 0.75rem 1rem;
     }
 }
+
+
+.logo-container{
+     position: fixed;
+     top: 1rem;
+     left: 1rem;
+     z-index: 1000;
+}
+
+.site-logo{
+     height: 140px;
+     width: auto;
+}
+
+
+@media (max-width: 722px) {
+    .cream-wall {
+        display: none;
+    }
+    .logo-container{
+     display: none;
+    }
+}
+
+
+@media (max-width: 527px) {
+    .logo-container {
+        display: none;
+    }
+    .site-logo {
+        display: none;
+    }
+    .site-footer{
+     box-shadow: none;
+    }
+    
+}
+
+
