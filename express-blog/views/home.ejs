@@ -13,8 +13,14 @@
 
     <ul>
       <!-- Auth -->
-      <li><a href="/login">Login</a></li>
-      <li><a href="/register">Register</a></li>
+       <% if (!user) { %>
+        <li><a href="/login">Login</a></li>
+        <li><a href="/register">Register</a></li>
+      <% } else { %>
+        <form action="/logout" method="POST">
+          <button class="logout-form" type="submit">Logout</button>
+        </form>
+      <% } %>
 
       <!-- Home + Public Blogs -->
       <li><a href="/">Home</a></li>

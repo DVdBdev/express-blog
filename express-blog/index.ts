@@ -10,6 +10,7 @@ import homeRouter from "./routes/home";
 import usersRouter from "./routes/users";
 import { connect } from "./database";
 import session from "./session";
+import { addUserToLocals } from "./middleware/addUserToLocals";
 
 dotenv.config();
 
@@ -24,6 +25,8 @@ app.set("views", path.join(__dirname, "views"));
 app.set("port", process.env.PORT ?? 3000);
 
 app.use(session);
+
+app.use(addUserToLocals);
 
 app.use("/", authRouter);
 app.use("/admin", adminRouter);

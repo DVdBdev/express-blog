@@ -1,15 +1,16 @@
 import { Router } from "express";
 import { createUser, login } from "../database";
 import { User } from "../interfaces";
+import { guestOnlyMiddleware } from "../middleware/guestOnly";
 
 const authRouter = Router();
 
-authRouter.get("/login", (req, res) => {
+authRouter.get("/login", guestOnlyMiddleware, (req, res) => {
     const error = req.query.error as string | undefined;
     res.render("login", { error });
 });
 
-authRouter.post("/login", async (req, res) => {
+authRouter.post("/login", guestOnlyMiddleware, async (req, res) => {
     const email : string = req.body.email;
     const password : string = req.body.password;
     try {
@@ -23,12 +24,12 @@ authRouter.post("/login", async (req, res) => {
     }
 });
 
-authRouter.get("/register", (req, res) => {
+authRouter.get("/register", guestOnlyMiddleware, (req, res) => {
     const error = req.query.error as string | undefined;
     res.render("register", { error });
 });
 
-authRouter.post("/register", async (req, res) => {
+authRouter.post("/register", guestOnlyMiddleware, async (req, res) => {
     const username = req.body.username;
     const email = req.body.email;
     const password = req.body.password;
@@ -47,6 +48,13 @@ authRouter.post("/register", async (req, res) => {
         console.error("register error:", error.message);
         res.redirect("/register?error=" + encodeURIComponent(error.message));
     }
+});
+
+authRouter.post("/logout", (req, res) => {
+    req.session.destroy(() => {
+        console.log("👋 Logged out");
+        res.redirect("/");
+    });
 });
 
 export default authRouter;
