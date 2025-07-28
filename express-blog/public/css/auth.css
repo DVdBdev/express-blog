@@ -7,6 +7,7 @@
      --secondary-text:#90835f;
      --primary-color:#a79e83;
      --accent-color:#c3bdac;
+     --error-color: #ff0000;
 }
 
 body {
@@ -161,6 +162,15 @@ body {
      font-weight: 600;
 }
 
+.auth__error {
+    color: var(--error-color);
+    font-weight: 500;
+    text-decoration: none;
+    display: flex;
+    width: fit-content;
+    margin-top: -1rem;
+}
+
 .login-wrapper .divider::after{
      position: absolute;
      content: "";
@@ -215,7 +225,7 @@ body {
 .login .forgot-password{
      display: flex;
      width: fit-content;
-     margin-top: -0.46rem;
+    margin-top: 0rem;
 }
 
 .login .login-button{
@@ -318,6 +328,10 @@ body {
     
     .site-footer {
         padding: 0.75rem 1rem;
+    }
+
+    .title {
+        background-color: var(--white);
     }
 }
 

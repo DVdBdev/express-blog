@@ -58,11 +58,11 @@ export async function createUser(username: string, email: string, password: stri
     console.log(`🆕👤 New user created: ${username}`);
 }
 
-export async function login(username: string, password: string) {
-    if (username === "" || password === "") {
+export async function login(email: string, password: string) {
+    if (email === "" || password === "") {
         throw new Error("Email and password required");
     }
-    let user : User | null = await userCollection.findOne<User>({username: username});
+    let user : User | null = await userCollection.findOne<User>({email: email});
     if (user) {
         if (await bcrypt.compare(password, user.password!)) {
             console.log(`🙋 Logged in as : \x1b[32m${user.username}\x1b[0m`);

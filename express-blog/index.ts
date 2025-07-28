@@ -8,6 +8,8 @@ import profileRouter from "./routes/profile";
 import blogRouter from "./routes/blog";
 import homeRouter from "./routes/home";
 import usersRouter from "./routes/users";
+import { connect } from "./database";
+import session from "./session";
 
 dotenv.config();
 
@@ -21,6 +23,8 @@ app.set("views", path.join(__dirname, "views"));
 
 app.set("port", process.env.PORT ?? 3000);
 
+app.use(session);
+
 app.use("/", authRouter);
 app.use("/admin", adminRouter);
 app.use("/dashboard", dashboardRouter);
@@ -29,6 +33,7 @@ app.use("/blogs", blogRouter);
 app.use("/", homeRouter);
 app.use("/users", usersRouter);
 
-app.listen(app.get("port"), () => {
+app.listen(app.get("port"), async () => {
+    await connect();
     console.log("Server started on http://localhost:" + app.get("port"));
 });
