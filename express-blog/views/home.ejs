@@ -6,42 +6,110 @@
     <title>Home</title>
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/home.css">
     <link rel="icon" type="png" href="assets/Logo.png">
 </head>
+
 <body>
-    <p>Home</p>
+    <%- include("partials/header.ejs") %>
+    <main class="home__main">
+      <section class="hero">
+        <section class="hero__left">
+          <div class="hero__content">
+            <h1 class="hero__title">Every Story Starts Somewhere.</h1>
+            <p class="hero__subtitle">
+              Join a growing community sharing their internships, travels, side projects, and more — one journey at a time.
+            </p> 
+          </div>
+          <div class="hero__actions">
+            <% if (!user) { %>
+              <a href="/register" class="hero__btn hero__btn--primary">Sign Up</a>
+              <a href="/journeys" class="hero__btn hero__btn--secondary">Explore Journeys</a>
+            <% } else { %>
+              <a href="/journeys/new" class="hero__btn hero__btn--primary">Start Your Journey</a>
+              <a href="/journeys" class="hero__btn hero__btn--secondary">Explore Journeys</a>
+            <% } %>
+          </div>
+        </section>
+        <section class="hero__right">
+          <div class="hero__image">
+            <img src="/assets/undraw_location-search_nesh.svg" alt="People sharing journeys">
+          </div>
+        </section>
+      </section>
 
-    <ul>
-      <!-- Auth -->
-       <% if (!user) { %>
-        <li><a href="/login">Login</a></li>
-        <li><a href="/register">Register</a></li>
-      <% } else { %>
-        <form action="/logout" method="POST">
-          <button class="logout-form" type="submit">Logout</button>
-        </form>
-      <% } %>
+      <section class="home__section">
+        <h2 class="section__title">Featured Journeys</h2>
+        <div class="card-grid">
+          <% featuredJourneys.forEach(journey => { %>
+            <article class="journey-card">
+              <a href="/journeys/<%= journey._id %>" class="journey-card__link">
+                <header class="journey-card__header">
+                  <h3 class="journey-card__title"><%= journey.title %></h3>
+                  <p class="journey-card__author">by <%= journey.author.username %></p>
+                </header>
+                <p class="journey-card__description">
+                  <%= journey.description.length > 100 ? journey.description.substring(0, 100) + "..." : journey.description %>
+                </p>
+              </a>
+            </article>
+          <% }) %>
+        </div>
+      </section>
 
-      <!-- Home + Public Blogs -->
-      <li><a href="/">Home</a></li>
-      <li><a href="/blogs">All Blogs</a></li>
-      <li><a href="/blogs/123">View Blog (placeholder)</a></li>
+      <section class="home__section">
+        <h2 class="section__title">Popular Posts</h2>
+        <div class="card-grid">
+          <article class="post-card">
+            <h3 class="post-card__title">How I Landed My Dream Internship</h3>
+            <p class="post-card__excerpt">A breakdown of my application process, projects I built, and what I wish I knew sooner.</p>
+            <a href="/blogs/1" class="post-card__link">Read more →</a>
+          </article>
 
-      <!-- Blog Editor -->
-      <li><a href="/blogs/new">Create New Blog</a></li>
-      <li><a href="/blogs/123/edit">Edit Blog (placeholder)</a></li>
+          <article class="post-card">
+            <h3 class="post-card__title">Remote Internship Survival Guide</h3>
+            <p class="post-card__excerpt">Working from home as an intern? Here's what worked for me and what didn't.</p>
+            <a href="/blogs/2" class="post-card__link">Read more →</a>
+          </article>
 
-      <!-- User -->
-      <li><a href="/profile">My Profile</a></li>
-      <li><a href="/users/123">Public Profile (placeholder)</a></li>
+          <article class="post-card">
+            <h3 class="post-card__title">Designing for Developers</h3>
+            <p class="post-card__excerpt">As a developer, I never thought I’d care about design. Then I did a UI/UX internship.</p>
+            <a href="/blogs/3" class="post-card__link">Read more →</a>
+          </article>
+        </div>
+      </section>
 
-      <!-- Dashboard -->
-      <li><a href="/dashboard">Dashboard</a></li>
+      <section class="home__section">
+        <h2 class="section__title">Meet the Creators</h2>
+        <div class="creator-grid">
+          <article class="creator-card">
+            <img src="/assets/avatar-w.jpg" alt="Emma's avatar" class="creator-card__avatar">
+            <h3 class="creator-card__name">Emma S.</h3>
+            <p class="creator-card__info">Design Intern, Belgium</p>
+            <a href="/users/123" class="creator-card__link">View Profile →</a>
+          </article>
 
-      <!-- Admin -->
-      <li><a href="/admin">Admin Dashboard</a></li>
-      <li><a href="/admin/users">Manage Users</a></li>
-      <li><a href="/admin/blogs">Manage Blogs</a></li>
-    </ul>
+          <article class="creator-card">
+            <img src="/assets/avatar.png" alt="Liam's avatar" class="creator-card__avatar">
+            <h3 class="creator-card__name">Liam K.</h3>
+            <p class="creator-card__info">Dev Intern, Netherlands</p>
+            <a href="/users/456" class="creator-card__link">View Profile →</a>
+          </article>
+
+          <article class="creator-card">
+            <img src="/assets/avatar.png" alt="Ava's avatar" class="creator-card__avatar">
+            <h3 class="creator-card__name">Ava R.</h3>
+            <p class="creator-card__info">Gap Year, Portugal</p>
+            <a href="/users/789" class="creator-card__link">View Profile →</a>
+          </article>
+        </div>
+      </section>
+
+      <%- include("partials/footer.ejs") %>
+    </main>
+    
 </body>
 </html>

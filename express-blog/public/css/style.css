@@ -2,16 +2,28 @@
 /* Montserrat Font */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-/* TEMPORARY */
-a, .logout-form {
-  text-decoration: underline;
-  color: blue;
+:root {
+  --base-color: white;
+  --base-variant: #e8e9ed;
+  --text-color: #111528;
+  --secondary-color: #27486e;
+  --primary-color: #3c6ba0;
+  --primary-text: #b2d3f2;
+  --secondary-text: #222428;
+  --tertiary-text: #4a4f55;
+  --input-color: #f1f3f5;
+  --icon-color: #aeb5bc;
+  --error-color: #ff0000;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 body {
-  font-family: "Montserrat", sans-serif;
   margin: 0;
-  padding: 0;
-  background-color: #f4f4f4;
+  font-family: "Montserrat", sans-serif;
+  color: var(--text-color);
+  background: var(--base-color);
 }
 

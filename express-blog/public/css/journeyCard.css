@@ -1,0 +1,40 @@
+.journey-card {
+  background-color: var(--base-variant);
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.journey-card:hover {
+  transform: translateY(-5px);
+}
+
+.journey-card__link {
+  text-decoration: none;
+  color: var(--text-color);
+  display: block;
+}
+
+.journey-card__header {
+  margin-bottom: 0.5rem;
+}
+
+.journey-card__title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin: 0;
+}
+
+.journey-card__author {
+  font-size: 0.9rem;
+  color: var(--secondary-text);
+  margin: 0.25rem 0 0;
+}
+
+.journey-card__description {
+  font-size: 1rem;
+  margin-top: 0.75rem;
+  color: var(--text-color);
+}

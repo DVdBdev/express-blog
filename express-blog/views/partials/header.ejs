@@ -1,0 +1,78 @@
+
+<header class="header">
+  <nav class="header__nav" aria-label="Main navigation">
+
+    <!-- Logo -->
+    <a href="/"><img src="assets/logo-nobg.png" alt="ExpressBlogLogo" class="header__logo"></a>
+
+    <!-- Hamburger Menu Button -->
+    <button class="header__hamburger" aria-label="Toggle menu" onclick="toggleMenu()">
+      <span class="header__hamburger-bar"></span>
+      <span class="header__hamburger-bar"></span>
+      <span class="header__hamburger-bar"></span>
+    </button>
+
+    <!-- Navigation Links -->
+    <ul class="header__nav-middle" id="navMenu">
+      <!-- Logo in menu for mobile -->
+      <li class="header__nav-item"><a href="/" class="header__nav-link">Home</a></li>
+      <li class="header__nav-item"><a href="/blogs" class="header__nav-link">Blogs</a></li>
+      <li class="header__nav-item"><a href="/contact" class="header__nav-link">Contact</a></li>
+
+      <% if (user) { %>
+        <li class="header__nav-item"><a href="/dashboard" class="header__nav-link">Dashboard</a></li>
+        <li class="header__nav-item"><a href="/profile" class="header__nav-link">Profile</a></li>
+        <% if (user.role === 'ADMIN') { %>
+          <li class="header__nav-item"><a href="/admin" class="header__nav-link">Admin Panel</a></li>
+        <% } %>
+      <% } %>
+
+      <!-- Auth Buttons for Small Screens -->
+      <li class="header__auth header__auth--inline">
+        <a href="/"><img src="assets/logo-nobg.png" alt="ExpressBlogLogo" class="header__logo header__logo--hamburger"></a>
+        <% if (!user) { %>
+          <a href="/login" class="header__btn header__btn--login">Login</a>
+          <a href="/register" class="header__btn header__btn--register">Register</a>
+        <% } else { %>
+          <a href="/blogs/new" class="header__btn header__btn--start-writing">Start Writing</a>
+          <form action="/logout" method="POST" class="header__logout-form">
+            <button type="submit" class="header__btn header__btn--logout">Logout</button>
+          </form>
+        <% } %>
+      </li>
+      <button class="header__close" aria-label="Close menu">×</button>
+
+    </ul>
+
+    <!-- Auth Buttons for Large Screens -->
+    <section class="header__auth">
+      <% if (!user) { %>
+        <a href="/login" class="header__btn header__btn--login">Login</a>
+        <a href="/register" class="header__btn header__btn--register">Register</a>
+      <% } else { %>
+        <a href="/blogs/new" class="header__btn header__btn--start-writing">Start Writing</a>
+        <form action="/logout" method="POST" class="header__logout-form">
+          <button type="submit" class="header__btn header__btn--logout">Logout</button>
+        </form>
+      <% } %>
+    </section>
+
+  </nav>
+</header>
+
+<script>
+  function toggleMenu() {
+    document.getElementById('navMenu').classList.toggle('header__nav-middle--active');
+  }
+  document.querySelector(".header__close").addEventListener("click", () => {
+    document.querySelector(".header__nav-middle").classList.remove("header__nav-middle--active");
+  });
+  window.addEventListener("resize", () => {
+    if (window.innerWidth < 768) {
+      const menu = document.querySelector(".header__nav-middle");
+      if (menu.classList.contains("header__nav-middle--active")) {
+        menu.classList.remove("header__nav-middle--active");
+      }
+    }
+  });
+</script>

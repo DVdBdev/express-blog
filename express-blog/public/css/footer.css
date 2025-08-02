@@ -1,0 +1,19 @@
+footer {
+    background-color: var(--primary-color);
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--primary-text);
+}
+
+.footer__smoll {
+    color: var(--primary-text);
+    font-size: 0.85rem;
+    transition: color 0.2s ease;
+}
+
+.footer__smoll a:hover {
+    text-decoration: underline;
+}
