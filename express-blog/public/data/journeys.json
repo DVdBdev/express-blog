@@ -1,0 +1,369 @@
+[
+  {
+    "_id": "1",
+    "title": "Internship in Berlin 2024",
+    "creator": { "_id": "u1", "username": "marco_dev" },
+    "description": "Sharing my experience working in a startup in Berlin.",
+    "kudos": 23,
+    "tags": ["internship", "tech", "germany"],
+    "posts": ["p1", "p2", "p3"],
+    "imageUrl": "/assets/internship.jpg"
+  },
+  {
+    "_id": "2",
+    "title": "Solo Backpacking Through Southeast Asia",
+    "creator": { "_id": "u2", "username": "adventure_lee" },
+    "description": "A 3-month solo trip through Thailand, Vietnam, and Cambodia.",
+    "kudos": 76,
+    "tags": ["travel", "solo", "asia"],
+    "posts": ["p4", "p5", "p6", "p7"],
+    "imageUrl": "/assets/backpacking.jpg"
+  },
+  {
+    "_id": "3",
+    "title": "Building My First SaaS Product",
+    "creator": { "_id": "u3", "username": "sophie_codes" },
+    "description": "From idea to launch — lessons from my side project.",
+    "kudos": 41,
+    "tags": ["startup", "coding", "indie"],
+    "posts": ["p8", "p9"],
+    "imageUrl": "/assets/saas.jpg"
+  },
+  {
+    "_id": "4",
+    "title": "Exchange Semester in Tokyo",
+    "creator": { "_id": "u4", "username": "akira" },
+    "description": "Cultural surprises and daily life as an exchange student in Japan.",
+    "kudos": 59,
+    "tags": ["exchange", "japan", "studentlife"],
+    "posts": ["p10", "p11", "p12"],
+    "imageUrl": "/assets/tokyo.jpg"
+  },
+  {
+    "_id": "5",
+    "title": "Interning at a FAANG Company",
+    "creator": { "_id": "u5", "username": "tech_jules" },
+    "description": "How I landed and survived my summer internship at Meta.",
+    "kudos": 88,
+    "tags": ["internship", "bigtech", "career"],
+    "posts": ["p13", "p14"],
+    "imageUrl": "/assets/meta.jpg"
+  },
+  {
+    "_id": "6",
+    "title": "Remote Work Across South America",
+    "creator": { "_id": "u6", "username": "nomaddev" },
+    "description": "Balancing work and exploration as a digital nomad.",
+    "kudos": 36,
+    "tags": ["remote", "digitalnomad", "southamerica"],
+    "posts": ["p15", "p16", "p17", "p18"],
+    "imageUrl": "/assets/south america.jpg"
+  },
+  {
+    "_id": "7",
+    "title": "Design Bootcamp: My UX Journey",
+    "creator": { "_id": "u7", "username": "creative_mira" },
+    "description": "From zero to design hero in 12 weeks.",
+    "kudos": 25,
+    "tags": ["design", "ux", "bootcamp"],
+    "posts": ["p19", "p20"],
+    "imageUrl": "/assets/ux.jpg"
+  },
+  {
+    "_id": "8",
+    "title": "Sustainable Living Challenge",
+    "creator": { "_id": "u8", "username": "green_mind" },
+    "description": "Trying to go zero waste for 30 days.",
+    "kudos": 17,
+    "tags": ["eco", "lifestyle", "sustainability"],
+    "posts": ["p21", "p22"]
+  },
+  {
+    "_id": "9",
+    "title": "Climbing Kilimanjaro",
+    "creator": { "_id": "u9", "username": "summit_seeker" },
+    "description": "Preparing for and reaching the summit.",
+    "kudos": 64,
+    "tags": ["adventure", "africa", "hiking"],
+    "posts": ["p23", "p24"]
+  },
+  {
+    "_id": "10",
+    "title": "Learning Rust from Scratch",
+    "creator": { "_id": "u10", "username": "dev_tony" },
+    "description": "My path through Rust, from pain to pleasure.",
+    "kudos": 33,
+    "tags": ["coding", "rust", "learning"],
+    "posts": ["p25"]
+  },
+  {
+    "_id": "11",
+    "title": "Erasmus in Spain",
+    "creator": { "_id": "u11", "username": "laura_erasmus" },
+    "description": "Flamenco, tapas, and some studying too.",
+    "kudos": 52,
+    "tags": ["erasmus", "spain", "exchange"],
+    "posts": ["p26", "p27"]
+  },
+  {
+    "_id": "12",
+    "title": "Side Hustle: Selling Stickers Online",
+    "creator": { "_id": "u12", "username": "stickerqueen" },
+    "description": "How I built a passive income stream from my art.",
+    "kudos": 29,
+    "tags": ["sidehustle", "art", "ecommerce"],
+    "posts": ["p28", "p29", "p30"]
+  },
+  {
+    "_id": "13",
+    "title": "From Burnout to Balance",
+    "creator": { "_id": "u13", "username": "mel_recharge" },
+    "description": "My mental health recovery and self-care routines.",
+    "kudos": 47,
+    "tags": ["mentalhealth", "selfcare", "wellbeing"],
+    "posts": ["p31", "p32"]
+  },
+  {
+    "_id": "14",
+    "title": "Volunteering in Kenya",
+    "creator": { "_id": "u14", "username": "travel4change" },
+    "description": "Teaching tech in rural communities.",
+    "kudos": 38,
+    "tags": ["volunteer", "education", "africa"],
+    "posts": ["p33", "p34"]
+  },
+  {
+    "_id": "15",
+    "title": "365 Days of Code",
+    "creator": { "_id": "u15", "username": "commitdaily" },
+    "description": "I coded every day for a year — here’s what I learned.",
+    "kudos": 92,
+    "tags": ["challenge", "coding", "devlife"],
+    "posts": ["p35", "p36", "p37"]
+  },
+  {
+    "_id": "16",
+    "title": "Master’s Thesis in AI",
+    "creator": { "_id": "u16", "username": "ai_girl" },
+    "description": "A deep dive into ethical algorithms.",
+    "kudos": 21,
+    "tags": ["ai", "research", "ethics"],
+    "posts": ["p38", "p39"]
+  },
+  {
+    "_id": "17",
+    "title": "Cycling Across Europe",
+    "creator": { "_id": "u17", "username": "pedal_power" },
+    "description": "A journey of 2,000 km on two wheels.",
+    "kudos": 71,
+    "tags": ["cycling", "europe", "travel"],
+    "posts": ["p40", "p41", "p42"]
+  },
+  {
+    "_id": "18",
+    "title": "Zero to Fullstack Developer",
+    "creator": { "_id": "u18", "username": "stackedmax" },
+    "description": "My path from no-code to job offer.",
+    "kudos": 58,
+    "tags": ["webdev", "bootcamp", "career"],
+    "posts": ["p43", "p44"]
+  },
+  {
+    "_id": "19",
+    "title": "Living in a Van",
+    "creator": { "_id": "u19", "username": "vanlifer" },
+    "description": "What it’s like to live and work from a converted van.",
+    "kudos": 46,
+    "tags": ["vanlife", "remote", "minimalism"],
+    "posts": ["p45", "p46"]
+  },
+  {
+    "_id": "20",
+    "title": "My Photography Journey",
+    "creator": { "_id": "u20", "username": "shutterbug" },
+    "description": "Capturing moments across continents.",
+    "kudos": 31,
+    "tags": ["photography", "travel", "art"],
+    "posts": ["p47", "p48", "p49"]
+  },
+  {
+    "_id": "61a7c3e9f2a4f8001a2b3c11",
+    "title": "Summer Internship 2025",
+    "creator": { "_id": "user001", "username": "alice" },
+    "description": "My exciting journey through a summer internship at a tech startup.",
+    "posts": [1,2,3],
+    "kudos": 15,
+    "tags": ["internship", "tech", "summer"]
+  },
+  {
+    "_id": "61a7c3e9f2a4f8001a2b3c12",
+    "title": "Roadtrip Across Europe",
+    "creator": { "_id": "user002", "username": "bob" },
+    "description": "Documenting my adventures and hidden gems found on a European road trip.",
+    "posts": [4,5,6,7],
+    "kudos": 34,
+    "tags": ["travel", "europe", "adventure"]
+  },
+  {
+    "_id": "61a7c3e9f2a4f8001a2b3c13",
+    "title": "My First Startup Experience",
+    "creator": { "_id": "user003", "username": "carol" },
+    "description": "How I launched and learned from my first startup venture.",
+    "posts": [8,9],
+    "kudos": 20,
+    "tags": ["startup", "entrepreneurship", "learning"]
+  },
+  {
+    "_id": "61a7c3e9f2a4f8001a2b3c14",
+    "title": "Teaching Abroad in Japan",
+    "creator": { "_id": "user004", "username": "dave" },
+    "description": "Sharing my experiences teaching English and exploring Japan.",
+    "posts": [10,11,12],
+    "kudos": 28,
+    "tags": ["teaching", "japan", "culture"]
+  },
+  {
+    "_id": "61a7c3e9f2a4f8001a2b3c15",
+    "title": "Fitness Journey 2024",
+    "creator": { "_id": "user005", "username": "emma" },
+    "description": "Tracking my fitness progress and challenges over the year.",
+    "posts": [13,14,15,16],
+    "kudos": 18,
+    "tags": ["fitness", "health", "goals"]
+  },
+  {
+    "_id": "61a7c3e9f2a4f8001a2b3c16",
+    "title": "Volunteering in South America",
+    "creator": { "_id": "user006", "username": "frank" },
+    "description": "My volunteer work and cultural discoveries in South America.",
+    "posts": [17,18],
+    "kudos": 22,
+    "tags": ["volunteering", "culture", "southamerica"]
+  },
+  {
+    "_id": "61a7c3e9f2a4f8001a2b3c17",
+    "title": "Learning to Code - Beginner’s Guide",
+    "creator": { "_id": "user007", "username": "grace" },
+    "description": "Documenting my journey as a coding newbie and resources I found helpful.",
+    "posts": [19,20,21],
+    "kudos": 25,
+    "tags": ["coding", "learning", "beginner"]
+  },
+  {
+    "_id": "61a7c3e9f2a4f8001a2b3c18",
+    "title": "Backpacking Southeast Asia",
+    "creator": { "_id": "user008", "username": "henry" },
+    "description": "An unforgettable backpacking trip through Southeast Asia’s highlights.",
+    "posts": [22,23,24,25],
+    "kudos": 40,
+    "tags": ["travel", "backpacking", "asia"]
+  },
+  {
+    "_id": "61a7c3e9f2a4f8001a2b3c19",
+    "title": "Graphic Design Portfolio",
+    "creator": { "_id": "user009", "username": "iris" },
+    "description": "Sharing my design projects and growth as a graphic designer.",
+    "posts": [26,27],
+    "kudos": 12,
+    "tags": ["design", "graphic", "portfolio"]
+  },
+  {
+    "_id": "61a7c3e9f2a4f8001a2b3c20",
+    "title": "Learning French in 6 Months",
+    "creator": { "_id": "user010", "username": "jack" },
+    "description": "My immersive experience learning French quickly with tips and resources.",
+    "posts": [28,29,30],
+    "kudos": 27,
+    "tags": ["language", "french", "learning"]
+  },
+  {
+    "_id": "61a7c3e9f2a4f8001a2b3c21",
+    "title": "Mastering Photography",
+    "creator": { "_id": "user011", "username": "kate" },
+    "description": "From beginner to pro: my journey with photography techniques and equipment.",
+    "posts": [31,32,33,34],
+    "kudos": 38,
+    "tags": ["photography", "art", "learning"]
+  },
+  {
+    "_id": "61a7c3e9f2a4f8001a2b3c22",
+    "title": "Cooking Around the World",
+    "creator": { "_id": "user012", "username": "leo" },
+    "description": "Exploring and cooking recipes from different countries and cultures.",
+    "posts": [35,36,37],
+    "kudos": 21,
+    "tags": ["cooking", "food", "travel"]
+  },
+  {
+    "_id": "61a7c3e9f2a4f8001a2b3c23",
+    "title": "Meditation & Mindfulness",
+    "creator": { "_id": "user013", "username": "mia" },
+    "description": "My path to mindfulness and daily meditation practice.",
+    "posts": [38,39],
+    "kudos": 19,
+    "tags": ["meditation", "health", "wellness"]
+  },
+  {
+    "_id": "61a7c3e9f2a4f8001a2b3c24",
+    "title": "Starting a Podcast",
+    "creator": { "_id": "user014", "username": "nate" },
+    "description": "Challenges and lessons learned launching my own podcast.",
+    "posts": [40,41,42],
+    "kudos": 16,
+    "tags": ["podcast", "media", "startup"]
+  },
+  {
+    "_id": "61a7c3e9f2a4f8001a2b3c25",
+    "title": "Sustainable Living Tips",
+    "creator": { "_id": "user015", "username": "olivia" },
+    "description": "How I’m reducing waste and living more sustainably day to day.",
+    "posts": [43,44,45],
+    "kudos": 29,
+    "tags": ["sustainability", "environment", "tips"]
+  },
+  {
+    "_id": "61a7c3e9f2a4f8001a2b3c26",
+    "title": "Digital Nomad Life",
+    "creator": { "_id": "user016", "username": "paul" },
+    "description": "Balancing work and travel as a remote digital nomad.",
+    "posts": [46,47,48],
+    "kudos": 33,
+    "tags": ["remote", "travel", "work"]
+  },
+  {
+    "_id": "61a7c3e9f2a4f8001a2b3c27",
+    "title": "Yoga Journey",
+    "creator": { "_id": "user017", "username": "quinn" },
+    "description": "My experiences and progress practicing yoga regularly.",
+    "posts": [49,50],
+    "kudos": 14,
+    "tags": ["yoga", "health", "wellness"]
+  },
+  {
+    "_id": "61a7c3e9f2a4f8001a2b3c28",
+    "title": "Urban Gardening",
+    "creator": { "_id": "user018", "username": "rachel" },
+    "description": "Growing my own food and plants in a small city apartment.",
+    "posts": [51,52,53],
+    "kudos": 17,
+    "tags": ["gardening", "urban", "sustainability"]
+  },
+  {
+    "_id": "61a7c3e9f2a4f8001a2b3c29",
+    "title": "Writing My First Novel",
+    "creator": { "_id": "user019", "username": "sam" },
+    "description": "Chronicling the ups and downs of writing a novel from scratch.",
+    "posts": [54,55,56,57],
+    "kudos": 26,
+    "tags": ["writing", "creative", "novel"]
+  },
+  {
+    "_id": "61a7c3e9f2a4f8001a2b3c30",
+    "title": "Climbing Adventures",
+    "creator": { "_id": "user020", "username": "tina" },
+    "description": "Scaling new heights and challenging myself with climbing.",
+    "posts": [58,59],
+    "kudos": 23,
+    "tags": ["climbing", "fitness", "adventure"]
+  }
+]

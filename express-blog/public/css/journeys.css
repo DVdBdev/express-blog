@@ -1,0 +1,225 @@
+.journeys__hero {
+  background-color: var(--base-variant);
+  padding: 4rem 2rem;
+  text-align: center;
+  color: var(--text-color);
+}
+
+.journeys__title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--text-color);
+}
+
+.journeys__subtitle {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+  color: var(--secondary-text);
+}
+
+.journeys__filters {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 1rem;
+  background-color: var(--base-color);
+  border-bottom: 1px solid var(--base-variant);
+}
+
+.journeys__filter-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+}
+
+.journeys__search-input,
+.journeys__sort-select {
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--base-variant);
+  border-radius: 4px;
+  font-size: 1rem;
+  background-color: var(--base-variant);
+  color: var(--text-color);
+  min-width: 180px;
+}
+
+.journeys__search-input::placeholder {
+  color: var(--secondary-text);
+}
+
+.journeys__sort-select {
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 10 10'%3E%3Cpath d='M0 2l5 5 5-5z' fill='%2390835f'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 0.65rem;
+}
+
+.journeys__filter-btn {
+  padding: 0.5rem 1.2rem;
+  border: none;
+  border-radius: 4px;
+  background-color: var(--primary-color);
+  color: var(--base-color);
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.journeys__filter-btn:hover {
+  background-color: var(--accent-color);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+  .journeys__filter-form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .journeys__search-input,
+  .journeys__sort-select,
+  .journeys__filter-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.journeys__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  padding: 2rem 1rem;
+  background-color: var(--base-variant);
+}
+
+.journey-card {
+  border: 1px solid var(--base-variant);
+  border-right: 5px solid var(--primary-color);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  background-color: var(--base-color);
+  transition: box-shadow 0.3s ease;
+}
+
+.journey-card:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.journey-card__link {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.journey-card__title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+.journey-card__creator-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  gap: 0.3rem;
+}
+
+.journey-card__creator-icon {
+  color: var(--primary-color);
+
+}
+
+.journey-card__creator {
+  font-size: 0.875rem;
+  color: var(--text-color);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+}
+
+.journey-card__creator-link {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.journey-card__creator-link:hover {
+  color: var(--accent-color);
+  text-decoration: underline;
+}
+
+
+.journey-card__description {
+  font-size: 1rem;
+  color: var(--text-color);
+  margin: 0.5rem 0;
+}
+
+.journey-card__meta {
+  font-size: 0.85rem;
+  color: var(--secondary-text);
+}
+
+.journeys__empty {
+  text-align: center;
+  font-size: 1rem;
+  padding: 2rem;
+  color: var(--secondary-text);
+}
+
+.journey-card__tags {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+.journey-card__tag {
+  background-color: var(--base-variant);
+  color: var(--text-color);
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.pagination {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.pagination__btn,
+.pagination__page {
+  padding: 0.5rem 1rem;
+  background-color: var(--base-variant);
+  color: var(--text-color);
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.pagination__page--active {
+  background-color: var(--primary-color);
+  color: white;
+  font-weight: bold;
+}
+
+.journey-card__image {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  margin-bottom: 0.75rem;
+}

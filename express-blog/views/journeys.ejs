@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/journeys.css">
+    <link rel="icon" type="png" href="assets/Logo.png">
+    <script src="https://kit.fontawesome.com/3046fdd1a4.js" crossorigin="anonymous"></script>
+</head>
+    <%- include("partials/header.ejs") %>
+    <main class="journeys">
+        <section class="journeys__hero">
+            <h1 class="journeys__title">Explore Journeys</h1>
+            <p class="journeys__subtitle">From internships to personal growth — discover how others are building their story.</p>
+        </section>
+        <section class="journeys__filters">
+            <form method="GET" action="/journeys" class="journeys__filter-form">
+            <input type="text" name="q" placeholder="Search journeys..." class="journeys__search-input">
+            <select name="sort" class="journeys__sort-select">
+                <option value="latest">Latest</option>
+                <option value="kudos">Most Kudos</option>
+            </select>
+            <button type="submit" class="journeys__filter-btn">Filter</button>
+            </form>
+        </section>
+        <section class="journeys__grid">
+            <% if (journeys.length > 0) { %>
+            <% journeys.forEach(journey => { %>
+                <article class="journey-card">
+                    <a href="/journeys/<%= journey._id %>" class="journey-card__link">
+                        
+                        <% if (journey.imageUrl) { %>
+                            <img src="<%= journey.imageUrl %>" loading="lazy" alt="Cover image for <%= journey.title %>" class="journey-card__image" />
+                        <% } else { %>
+                            <img src="/assets/default.jpg" loading="lazy" alt="Default cover image" class="journey-card__image" />
+                        <% } %>
+
+                        <h2 class="journey-card__title"><%= journey.title %></h2>
+                        
+                        <section class="journey-card__creator-section">
+                        <i class="fa-solid fa-pen-clip journey-card__creator-icon"></i>
+                        <a href="/users/<%= journey.creator._id %>" class="journey-card__creator-link">
+                            <%= journey.creator.username %>
+                        </a>
+                        </section>
+
+                        <p class="journey-card__description"><%= journey.description %></p>
+
+                        <p class="journey-card__meta">
+                        <%= journey.posts.length %> blog<%= journey.posts.length === 1 ? '' : 's' %> • 
+                        <%= journey.kudos %> kudos
+                        </p>
+
+                        <ul class="journey-card__tags">
+                        <% journey.tags.slice(0, 3).forEach(tag => { %>
+                            <li class="journey-card__tag">#<%= tag %></li>
+                        <% }) %>
+                        </ul>
+
+                    </a>
+                </article>
+            <% }) %>
+            <% } else { %>
+            <p class="journeys__empty">No journeys found. Try adjusting your filters.</p>
+            <% } %>
+        </section>
+        <nav class="pagination">
+            <% if (currentPage > 1) { %>
+                <a href="?page=<%= currentPage - 1 %>" class="pagination__btn">Previous</a>
+            <% } %>
+
+            <% for (let i = 1; i <= totalPages; i++) { %>
+                <a href="?page=<%= i %>" class="pagination__page <%= i === currentPage ? 'pagination__page--active' : '' %>"><%= i %></a>
+            <% } %>
+
+            <% if (currentPage < totalPages) { %>
+                <a href="?page=<%= currentPage + 1 %>" class="pagination__btn">Next</a>
+            <% } %>
+            </nav>
+        <%- include("partials/footer.ejs") %>
+    </main>
+<body>
+    
+    
+    
+</body>
+</html>

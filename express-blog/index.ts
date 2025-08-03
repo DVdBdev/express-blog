@@ -11,6 +11,8 @@ import usersRouter from "./routes/users";
 import { connect } from "./database";
 import session from "./session";
 import { addUserToLocals } from "./middleware/addUserToLocals";
+import { allowedNodeEnvironmentFlags } from "process";
+import journeysRouter from "./routes/journeys";
 
 dotenv.config();
 
@@ -33,6 +35,7 @@ app.use("/admin", adminRouter);
 app.use("/dashboard", dashboardRouter);
 app.use("/profile", profileRouter);
 app.use("/blogs", blogRouter);
+app.use("/journeys", journeysRouter);
 app.use("/", homeRouter);
 app.use("/users", usersRouter);
 

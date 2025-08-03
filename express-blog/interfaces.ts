@@ -9,13 +9,15 @@ export interface User {
 }
 
 export interface Journey {
-  _id?: ObjectId;
+  _id: string;
   title: string;
   description: string;
-  author: Pick<User, "_id" | "username">;
-  createdAt?: Date;
-  updatedAt?: Date;
-  tags?: string[];
-  isPublic?: boolean;
-  coverImage?: string;
+  creator: {
+    _id: string;
+    username: string;
+  };
+  posts: string[];
+  kudos: number;
+  tags: string[];
+  imageUrl: string;
 }
