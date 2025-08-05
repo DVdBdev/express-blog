@@ -7,7 +7,8 @@
     "kudos": 23,
     "tags": ["internship", "tech", "germany"],
     "posts": ["p1", "p2", "p3"],
-    "imageUrl": "/assets/internship.jpg"
+    "imageUrl": "/assets/internship.jpg",
+    "dateStarted": "2024-06-01"
   },
   {
     "_id": "2",
@@ -17,7 +18,8 @@
     "kudos": 76,
     "tags": ["travel", "solo", "asia"],
     "posts": ["p4", "p5", "p6", "p7"],
-    "imageUrl": "/assets/backpacking.jpg"
+    "imageUrl": "/assets/backpacking.jpg",
+    "dateStarted": "2025-02-10"
   },
   {
     "_id": "3",
@@ -27,7 +29,8 @@
     "kudos": 41,
     "tags": ["startup", "coding", "indie"],
     "posts": ["p8", "p9"],
-    "imageUrl": "/assets/saas.jpg"
+    "imageUrl": "/assets/saas.jpg",
+    "dateStarted": "2025-03-20"
   },
   {
     "_id": "4",

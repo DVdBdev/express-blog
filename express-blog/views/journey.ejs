@@ -14,47 +14,7 @@
 </head>
     <%- include("partials/header.ejs") %>
     <main class="journey">
-        <section class="journey__hero">
-            <img src="<%= journey.imageUrl %>" alt="Cover image" class="journey__cover" />
-            <h1 class="journey__title"><%= journey.title %></h1>
-            <p class="journey__meta">
-                <%= journey.posts.length %> blog<%= journey.posts.length === 1 ? '' : 's' %> • 
-                <%= journey.kudos %> kudos
-            </p>
-            </section>
-
-            <section class="journey__about">
-            <div class="journey__description">
-                <h2>About this Journey</h2>
-                <p><%= journey.description %></p>
-                <% if (journey.posts.length > 0) { %>
-                <a href="/journeys/<%= journey._id %>/posts/<%= journey.posts[0]._id %>" class="journey__cta-btn">Start Reading</a>
-                <% } %>
-            </div>
-
-            <aside class="journey__author">
-                <img src="<%= journey.creator.avatarUrl || '/images/default-avatar.png' %>" alt="Author avatar" class="journey__author-avatar" />
-                <h3><a href="/users/<%= journey.creator._id %>"><%= journey.creator.username %></a></h3>
-                <p><%= journey.creator.bio || 'No bio yet.' %></p>
-            </aside>
-            </section>
-
-            <section class="journey__kudo">
-            <form method="POST" action="/journeys/<%= journey._id %>/kudo" class="kudo-form">
-                <button type="submit" class="kudo-button">
-                <i class="fa-solid fa-heart"></i> Kudo (<span class="kudo-count"><%= journey.kudos %></span>)
-                </button>
-            </form>
-            </section>
-
-            <section class="journey__posts">
-            <h2>Posts in this Journey</h2>
-            <ul class="journey__post-list">
-                <% journey.posts.forEach(post => { %>
-                <li><a href="/journeys/<%= journey._id %>/posts/<%= post._id %>"><%= post.title %></a></li>
-                <% }) %>
-            </ul>
-            </section>
+        
         <%- include("partials/footer.ejs") %>
     </main>
 <body>
