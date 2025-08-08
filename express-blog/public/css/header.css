@@ -38,6 +38,10 @@
     display: block;
 }
 
+.logo {
+    width: 288px;
+}
+
 .header__nav-middle {
     display: none;
     list-style: none;
@@ -149,7 +153,7 @@
 }
 
 /* Responsive Logic */
-@media (max-width: 990px) {
+@media (max-width: 1290px) {
     .header__auth {
         display: none;
     }
@@ -175,7 +179,7 @@
     }
 }
 
-@media (min-width: 991px) {
+@media (min-width: 1291px) {
     .header__nav {
         flex-wrap: nowrap;
     }
