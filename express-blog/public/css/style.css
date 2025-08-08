@@ -32,7 +32,3 @@ body {
   background: var(--base-color);
 }
 
-main {
-  min-height: 90vh;
-}
-
