@@ -14,9 +14,100 @@
 </head>
     <%- include("partials/header.ejs") %>
     <main class="journey">
+        <section class="journey__aside">
+            <a href="/journeys" class="journey__all-journeys"><span class="back-arrow">←</span> All Journeys</a>
+        </section>
+        <section class="journey__main">
+            <a href="/journeys" class="journey__all-journeys-main"><span class="back-arrow">←</span> All Journeys</a>
+            <section class="journey__hero">
+                <img src="<%= journey.imageUrl %>" alt="Cover image" class="journey__cover" />
+            </section>
+            <h2 class="journey__date-started">Started journey on <%= journey.dateStarted %></h2>
+            <h1 class="journey__title"><%= journey.title %></h1>
+            <ul class="journey__tags">
+                <% journey.tags.forEach(tag => { %>
+                    <li class="journey__tag">#<%= tag %></li>
+                <% }) %>
+            </ul>
+
+            <section class="journey__creator-info">
+                <!-- Avatar -->
+                <img
+                    src="/assets/avatar.png"
+                    alt="<%= journey.creator.username %>'s avatar"
+                    class="journey__creator-avatar"
+                />
+
+                <!-- Username & Post Count -->
+                <div class="journey__creator-details">
+                    <div class="journey__creator-username">
+                    <a href="/users/<%= journey.creator._id %>">
+                        <%= journey.creator.username %>
+                    </a>
+                    </div>
+                    <div class="journey__creator-posts">
+                    <%= journey.posts.length %> posts in this journey
+                    </div>
+                </div>
+            </section>
+
+            <section class="journey__btns">
+                <section class="journey__kudos">               
+                    <button class="kudo-btn" title="Kudo">
+                        <i class="fa-solid fa-heart"></i>
+                    </button>
+
+                    <button class="kudo-count" title="View kudos">
+                        42
+                    </button>
+                </section>
+                <section class="journey__right-btns">
+                    <button class="share-btn" title="Share">
+                        <i class="fa-solid fa-arrow-up-from-bracket"></i>
+                    </button>
+                    <button class="bookmark-btn" title="Bookmark">
+                        <i class="fa-solid fa-bookmark"></i>
+                    </button>
+                    <button class="more-btn">
+                        <i class="fa-solid fa-ellipsis"></i>
+                    </button>
+                </section>
+                
+            </section>
+            <section class="blogs__grid">
+            <% if (blogs.length > 0) { %>
+            <% blogs.forEach(blog => { %>
+                <article class="blog-card">
+                    <a href="/blogs/<%= blog._id %>" class="blog-card__link">
+                        
+                        <% if (blog.imageUrl) { %>
+                            <img src="<%= blog.imageUrl %>" loading="lazy" alt="Cover image for <%= blog.title %>" class="blog-card__image" />
+                        <% } else { %>
+                            <img src="/assets/default.jpg" loading="lazy" alt="Default cover image" class="blog-card__image" />
+                        <% } %>
+                        <h2 class="blog-card__title"><%= blog.title %></h2>
+                        <p class="blog-card__description"><%= blog.description %></p>
+                        <p class="blog-card__meta">
+                            <%= blog.readLength %> min read • 
+                            <%= blog.kudos %> kudos
+                        </p>
+                        <ul class="blog-card__tags">
+                            <% journey.tags.slice(0, 3).forEach(tag => { %>
+                                <li class="blog-card__tag">#<%= tag %></li>
+                            <% }) %>
+                        </ul>
+                    </a>
+                </article>
+            <% }) %>
+            <% } else { %>
+            <p class="journeys__empty">No blogs found. Maybe the creator is still on an adventure</p>
+            <% } %>
+        </section>
+
+        </section>
         
-        <%- include("partials/footer.ejs") %>
     </main>
+    <%- include("partials/footer.ejs") %>
 <body>
     
     

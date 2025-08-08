@@ -36,17 +36,23 @@ journeysRouter.get("/:id", (req, res) => {
   const journeyId = req.params.id;
 
   const filePath = path.join(__dirname, "../public/data/journeys.json");
+  const blogsPath = path.join(__dirname, "../public/data/blogs.json");
 
   const rawData = fs.readFileSync(filePath, "utf-8");
+  const blograwData = fs.readFileSync(blogsPath, "utf-8");
+
   const journeys = JSON.parse(rawData);
+  const blogs = JSON.parse(blograwData);
 
   const journey = journeys.find((j: any) => String(j._id) === String(journeyId));
+  const blogsFromJourney = blogs.filter((blog: any) => String(blog.journeyId) === String(journeyId));
+
 
   if (!journey) {
     return res.status(404).send("Journey not found");
   }
 
-  res.render("journey", { journey });
+  res.render("journey", { journey, blogs: blogsFromJourney });
 });
 
 // journeysRouter.get("/", (req, res) => {

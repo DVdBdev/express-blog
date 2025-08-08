@@ -1,0 +1,615 @@
+[
+  {
+    "_id": "p1",
+    "title": "Landing in Berlin & First Impressions",
+    "description": "The journey begins! My first week settling into life and work in Berlin.",
+    "readLength": 3,
+    "content": {
+      "time": 1693560000000,
+      "blocks": [
+        {
+          "type": "header",
+          "data": {
+            "text": "Arrival in Berlin 🇩🇪",
+            "level": 2
+          }
+        },
+        {
+          "type": "paragraph",
+          "data": {
+            "text": "I landed at Berlin Brandenburg Airport last Monday, excited but nervous. The city immediately struck me as both modern and historic—a mix of concrete minimalism and preserved history."
+          }
+        },
+        {
+          "type": "header",
+          "data": {
+            "text": "Settling In",
+            "level": 3
+          }
+        },
+        {
+          "type": "paragraph",
+          "data": {
+            "text": "My Airbnb is in Prenzlauer Berg — a quiet but lively neighborhood filled with bakeries, bikes, and young families. It’s perfect for easing into the Berlin rhythm."
+          }
+        },
+        {
+          "type": "list",
+          "data": {
+            "style": "unordered",
+            "items": [
+              "Tried my first currywurst 🍛",
+              "Explored Mauerpark flea market",
+              "Learned to use the U-Bahn"
+            ]
+          }
+        },
+        {
+          "type": "header",
+          "data": {
+            "text": "First Day at the Startup 🚀",
+            "level": 3
+          }
+        },
+        {
+          "type": "paragraph",
+          "data": {
+            "text": "The team was super welcoming. I'm working as a frontend intern, primarily in React and TypeScript. Their codebase is actually cleaner than I expected, and I already got my first task merged!"
+          }
+        },
+        {
+          "type": "quote",
+          "data": {
+            "text": "“Berlin feels like a playground for creatives and builders.”",
+            "caption": "me, after 4 cups of coffee"
+          }
+        },
+        {
+          "type": "delimiter",
+          "data": {}
+        },
+        {
+          "type": "paragraph",
+          "data": {
+            "text": "Overall, it’s been a fulfilling (and slightly chaotic) week. More updates coming soon!"
+          }
+        }
+      ],
+      "version": "2.28.2"
+    },
+    "createdAt": "2024-06-03T09:15:00Z",
+    "journeyId": "1",
+    "author": {
+      "_id": "u1",
+      "username": "marco_dev"
+    },
+    "imageUrl": "/assets/plane.jpg",
+    "tags": [
+      "berlin",
+      "internship",
+      "firstweek"
+    ],
+    "kudos": 9
+  },
+  {
+    "_id": "p2",
+    "title": "Diving Into the Tech Stack",
+    "description": "A deep dive into the technologies I’m using during my internship and how I adapted to the codebase.",
+    "readLength": 3,
+    "content": {
+      "time": 1694164800000,
+      "blocks": [
+        {
+          "type": "header",
+          "data": {
+            "text": "Tech Stack Breakdown ⚙️",
+            "level": 2
+          }
+        },
+        {
+          "type": "paragraph",
+          "data": {
+            "text": "In my second week, I got a much clearer picture of the tech environment here. The team is building a SaaS analytics dashboard, and the stack is more modern than I expected."
+          }
+        },
+        {
+          "type": "list",
+          "data": {
+            "style": "unordered",
+            "items": [
+              "Frontend: React (with TypeScript)",
+              "Backend: Node.js (Express)",
+              "Database: PostgreSQL",
+              "Styling: TailwindCSS",
+              "Auth: JWT + OAuth (GitHub)",
+              "CI/CD: GitHub Actions"
+            ]
+          }
+        },
+        {
+          "type": "header",
+          "data": {
+            "text": "Onboarding Challenges",
+            "level": 3
+          }
+        },
+        {
+          "type": "paragraph",
+          "data": {
+            "text": "The most challenging part wasn’t the stack — it was understanding the team’s conventions. Their folder structure and naming patterns are super opinionated, which took time to learn."
+          }
+        },
+        {
+          "type": "paragraph",
+          "data": {
+            "text": "Another hurdle was figuring out how their internal component library worked. It’s built on top of Radix + Tailwind, and has its own theme context. It felt like a mini design system inside the app."
+          }
+        },
+        {
+          "type": "header",
+          "data": {
+            "text": "My First Real Contribution 🎉",
+            "level": 3
+          }
+        },
+        {
+          "type": "paragraph",
+          "data": {
+            "text": "After going through a couple of onboarding tasks, I picked up a ticket to refactor the user settings modal. I learned the hard way that making changes in a shared design system affects more things than you expect 😅."
+          }
+        },
+        {
+          "type": "quote",
+          "data": {
+            "text": "“Naming things is still the hardest problem in computer science.”",
+            "caption": "me, naming a function 'handleThing'"
+          }
+        },
+        {
+          "type": "delimiter",
+          "data": {}
+        },
+        {
+          "type": "paragraph",
+          "data": {
+            "text": "Despite the challenges, it’s rewarding to see my code running in production already. Next week I’ll be working on data visualizations!"
+          }
+        }
+      ],
+      "version": "2.28.2"
+    },
+    "createdAt": "2024-06-10T10:40:00Z",
+    "journeyId": "1",
+    "author": {
+      "_id": "u1",
+      "username": "marco_dev"
+    },
+    "imageUrl": "/assets/stack.jpg",
+    "tags": [
+      "tech",
+      "react",
+      "internship"
+    ],
+    "kudos": 15
+  },
+  {
+    "_id": "p3",
+    "title": "Cultural Clashes and Cafe Code Sessions",
+    "description": "Not everything about working abroad is about code. Here’s what surprised me about German work culture — and how I’ve found balance.",
+    "readLength": 3,
+    "content": {
+      "time": 1694773200000,
+      "blocks": [
+        {
+          "type": "header",
+          "data": {
+            "text": "Work Culture Surprise 🇩🇪",
+            "level": 2
+          }
+        },
+        {
+          "type": "paragraph",
+          "data": {
+            "text": "One of the most unexpected challenges of this internship has been adjusting to the culture at work. Germans are punctual — painfully punctual. If a meeting starts at 09:00, you’d better be there at 08:59."
+          }
+        },
+        {
+          "type": "paragraph",
+          "data": {
+            "text": "People are also super direct, which I initially took as cold. But I’m slowly learning that it’s not rude, it’s just... efficient. There’s no dancing around feedback, and honestly, that’s refreshing."
+          }
+        },
+        {
+          "type": "header",
+          "data": {
+            "text": "Cafe Coding ☕",
+            "level": 3
+          }
+        },
+        {
+          "type": "paragraph",
+          "data": {
+            "text": "After work, I’ve made it a habit to bring my laptop to a few local cafes. There’s one near Prenzlauer Berg where the Wi-Fi is strong and the espresso even stronger. There’s something magical about coding with soft jazz and espresso in the background."
+          }
+        },
+        {
+          "type": "list",
+          "data": {
+            "style": "unordered",
+            "items": [
+              "Café Neue Liebe — Best vibe for deep focus",
+              "The Barn — Overpriced but cozy",
+              "Five Elephant — Great pastries + Wi-Fi"
+            ]
+          }
+        },
+        {
+          "type": "header",
+          "data": {
+            "text": "Languages Everywhere",
+            "level": 3
+          }
+        },
+        {
+          "type": "paragraph",
+          "data": {
+            "text": "At work, we speak English. On the street, it’s German. In the café, it’s a mix of French, Spanish, and Dutch. I’ve never been in such a linguistically diverse place — it’s chaotic and beautiful."
+          }
+        },
+        {
+          "type": "quote",
+          "data": {
+            "text": "“You don’t need to be fluent in the language — you just need to be fluent in curiosity.”",
+            "caption": "me, ordering coffee with 60% confidence"
+          }
+        }
+      ],
+      "version": "2.28.2"
+    },
+    "createdAt": "2024-06-17T16:10:00Z",
+    "journeyId": "1",
+    "author": {
+      "_id": "u1",
+      "username": "marco_dev"
+    },
+    "imageUrl": "/assets/coffee.jpg",
+    "tags": [
+      "culture",
+      "life",
+      "berlin"
+    ],
+    "kudos": 19
+  },
+  {
+    "_id": "p4",
+    "title": "Landing in Bangkok: Chaos, Heat, and Smiles",
+    "description": "First impressions of Southeast Asia, from street food stalls to tuk-tuks and temples. It’s overwhelming and exhilarating.",
+    "readLength": 3,
+    "content": {
+      "time": 1707561600000,
+      "blocks": [
+        {
+          "type": "header",
+          "data": {
+            "text": "Touchdown in Thailand 🇹🇭",
+            "level": 2
+          }
+        },
+        {
+          "type": "paragraph",
+          "data": {
+            "text": "I arrived in Bangkok after a red-eye flight from Frankfurt. Jetlagged, sweaty, and completely unprepared for the humidity, I stepped out of Suvarnabhumi Airport straight into organized chaos — and I loved it instantly."
+          }
+        },
+        {
+          "type": "header",
+          "data": {
+            "text": "Sensory Overload",
+            "level": 3
+          }
+        },
+        {
+          "type": "paragraph",
+          "data": {
+            "text": "The air was thick with exhaust, grilled meat, incense, and what I think was durian. Tuk-tuks zoomed past me, their drivers yelling prices in broken English. Every street corner had a sizzling wok, a cart of fresh fruit, or someone selling knockoff sunglasses."
+          }
+        },
+        {
+          "type": "list",
+          "data": {
+            "style": "unordered",
+            "items": [
+              "Pad Thai from a street vendor: $1.50 and divine.",
+              "Tried my first Thai iced tea — dangerously addictive.",
+              "Got scammed on a tuk-tuk ride within 2 hours of landing 😅"
+            ]
+          }
+        },
+        {
+          "type": "header",
+          "data": {
+            "text": "Wat Pho at Sunrise",
+            "level": 3
+          }
+        },
+        {
+          "type": "paragraph",
+          "data": {
+            "text": "Despite exhaustion, I forced myself to visit Wat Pho at 6:00am. The Reclining Buddha was massive and golden and peaceful. For a moment, the city noise faded, and it was just me and the monks chanting nearby."
+          }
+        },
+        {
+          "type": "quote",
+          "data": {
+            "text": "“Travel isn’t always about escape. Sometimes it’s about being more present than ever.”",
+            "caption": "me, sweating and barefoot in a temple"
+          }
+        }
+      ],
+      "version": "2.28.2"
+    },
+    "createdAt": "2025-02-10T11:30:00Z",
+    "journeyId": "2",
+    "author": {
+      "_id": "u2",
+      "username": "adventure_lee"
+    },
+    "imageUrl": "/assets/bangkok-street.jpg",
+    "tags": [
+      "thailand",
+      "first-impressions",
+      "temples"
+    ],
+    "kudos": 34
+  },
+  {
+    "_id": "p5",
+    "title": "Train to Chiang Mai: The Long Ride North",
+    "description": "An overnight train, chance encounters with travelers, and the slower rhythms of northern Thailand.",
+    "content": {
+      "time": 1707734400000,
+      "blocks": [
+        {
+          "type": "header",
+          "data": {
+            "text": "All Aboard the Night Train 🚆",
+            "level": 2
+          }
+        },
+        {
+          "type": "paragraph",
+          "data": {
+            "text": "After a whirlwind of Bangkok’s buzz, I booked a second-class sleeper train to Chiang Mai. 13 hours. No Wi-Fi. Thin mattress. Perfect setup to unwind and reflect."
+          }
+        },
+        {
+          "type": "paragraph",
+          "data": {
+            "text": "My seat converted into a bunk bed. Curtains gave a hint of privacy. Across from me sat a German couple who were also backpacking. We exchanged itineraries and snacks (they had Haribo, I had sticky rice)."
+          }
+        },
+        {
+          "type": "header",
+          "data": {
+            "text": "Stars Through the Window",
+            "level": 3
+          }
+        },
+        {
+          "type": "paragraph",
+          "data": {
+            "text": "Somewhere around midnight, I peeked out from behind the curtain and saw stars I hadn’t seen in years. It reminded me why I travel — to slow down and notice the world again."
+          }
+        },
+        {
+          "type": "list",
+          "data": {
+            "style": "unordered",
+            "items": [
+              "Pro tip: Book lower bunks — they’re more stable and cooler.",
+              "Train food is edible… barely.",
+              "The rhythmic clack of the tracks is better than any white noise app."
+            ]
+          }
+        },
+        {
+          "type": "header",
+          "data": {
+            "text": "Morning Arrival",
+            "level": 3
+          }
+        },
+        {
+          "type": "paragraph",
+          "data": {
+            "text": "At 7:30 AM, we rolled into Chiang Mai. The city was misty and green. Compared to Bangkok, it felt like a calm exhale."
+          }
+        },
+        {
+          "type": "quote",
+          "data": {
+            "text": "“Sometimes the best parts of a trip are the transitions.”",
+            "caption": "– a sleepy me, disembarking with a backpack and a smile"
+          }
+        }
+      ],
+      "version": "2.28.2"
+    },
+    "createdAt": "2025-02-12T09:00:00Z",
+    "journeyId": "2",
+    "author": {
+      "_id": "u2",
+      "username": "adventure_lee"
+    },
+    "imageUrl": "/assets/thai-train.jpg",
+    "tags": [
+      "thailand",
+      "train",
+      "slow-travel"
+    ],
+    "kudos": 29
+  },
+  {
+    "_id": "p6",
+    "title": "Chiang Mai Temples & Street Food",
+    "description": "Exploring sacred temples, chatting with monks, and tasting northern Thai cuisine that hits all the right notes.",
+    "content": {
+      "time": 1707820800000,
+      "blocks": [
+        {
+          "type": "header",
+          "data": {
+            "text": "Temple Mornings",
+            "level": 2
+          }
+        },
+        {
+          "type": "paragraph",
+          "data": {
+            "text": "Chiang Mai’s old city is surrounded by a square moat and ancient walls. I rented a bike and pedaled from temple to temple — Wat Chedi Luang, Wat Phra Singh, and smaller ones without names but with just as much beauty."
+          }
+        },
+        {
+          "type": "paragraph",
+          "data": {
+            "text": "At Wat Suan Dok, I sat down for a ‘Monk Chat’. It’s exactly what it sounds like — young monks practicing English and sharing their way of life. One monk told me: ‘Peace is not in the temple. It’s in your breath.’"
+          }
+        },
+        {
+          "type": "header",
+          "data": {
+            "text": "Afternoons of Spice and Smoke",
+            "level": 3
+          }
+        },
+        {
+          "type": "paragraph",
+          "data": {
+            "text": "In the afternoons, I wandered into food markets and let my nose do the guiding. I tried khao soi — a creamy, curry noodle soup that instantly became my favorite dish of the trip."
+          }
+        },
+        {
+          "type": "list",
+          "data": {
+            "style": "unordered",
+            "items": [
+              "Grilled pork skewers for 10 baht",
+              "Sticky mango rice, warm and perfect",
+              "Thai iced tea in a plastic bag with a straw"
+            ]
+          }
+        },
+        {
+          "type": "quote",
+          "data": {
+            "text": "“In Chiang Mai, food is a form of hospitality, not just business.”",
+            "caption": "– a vendor at the North Gate night market"
+          }
+        },
+        {
+          "type": "header",
+          "data": {
+            "text": "Golden Hours",
+            "level": 3
+          }
+        },
+        {
+          "type": "paragraph",
+          "data": {
+            "text": "I ended the day at a temple on a hill. Locals lit incense and rang bells. I didn’t understand the rituals, but I felt welcomed to witness them. The sky turned orange. The city slowed down. So did I."
+          }
+        }
+      ],
+      "version": "2.28.2"
+    },
+    "createdAt": "2025-02-13T18:00:00Z",
+    "journeyId": "2",
+    "author": {
+      "_id": "u2",
+      "username": "adventure_lee"
+    },
+    "imageUrl": "/assets/chiangmai.jpg",
+    "tags": [
+      "chiangmai",
+      "temples",
+      "food"
+    ],
+    "kudos": 34
+  },
+  {
+    "_id": "p7",
+    "title": "Reflections in Cambodia",
+    "description": "As my journey wrapped up in Cambodia, I found stillness among ancient ruins and new clarity on modern streets.",
+    "content": {
+      "time": 1708224000000,
+      "blocks": [
+        {
+          "type": "header",
+          "data": {
+            "text": "First Light at Angkor Wat",
+            "level": 2
+          }
+        },
+        {
+          "type": "paragraph",
+          "data": {
+            "text": "I woke up at 4:30am to catch the sunrise at Angkor Wat. The temple slowly revealed itself in the soft glow of dawn — still, proud, ancient. It was quiet except for the occasional camera shutter. I put mine down and just watched."
+          }
+        },
+        {
+          "type": "paragraph",
+          "data": {
+            "text": "Later I wandered through Ta Prohm, the temple swallowed by trees. Roots twist through stone like nature reclaiming what was once hers. It reminded me of impermanence — of how time doesn’t take, it transforms."
+          }
+        },
+        {
+          "type": "header",
+          "data": {
+            "text": "From Ruins to Rooftops",
+            "level": 3
+          }
+        },
+        {
+          "type": "paragraph",
+          "data": {
+            "text": "Back in Phnom Penh, I walked the riverside at sunset. Monks with cellphones, tuk-tuks dodging potholes, street kids juggling fire for tips. Cambodia is layered — brutal history and resilient spirit living side by side."
+          }
+        },
+        {
+          "type": "quote",
+          "data": {
+            "text": "“This is the new Cambodia. Not forgetting, just walking forward.”",
+            "caption": "– a local guide named Dara"
+          }
+        },
+        {
+          "type": "header",
+          "data": {
+            "text": "What I’m Taking Home",
+            "level": 3
+          }
+        },
+        {
+          "type": "paragraph",
+          "data": {
+            "text": "Three months. Three countries. A backpack, a journal, and a lot of noodles. But I leave with more than souvenirs — I’m bringing home presence, perspective, and peace. I used to think travel was about seeing the world. Now I think it’s about seeing yourself in it."
+          }
+        }
+      ],
+      "version": "2.28.2"
+    },
+    "createdAt": "2025-02-25T15:30:00Z",
+    "journeyId": "2",
+    "author": {
+      "_id": "u2",
+      "username": "adventure_lee"
+    },
+    "imageUrl": "/assets/angkorwat.jpg",
+    "tags": [
+      "cambodia",
+      "reflection",
+      "angkorwat"
+    ],
+    "kudos": 51
+  }
+]

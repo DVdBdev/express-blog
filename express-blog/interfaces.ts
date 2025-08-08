@@ -25,6 +25,7 @@ export interface Journey {
 export interface Blog {
   _id: string;
   title: string;
+  description: string;
   content: EditorJsOutput;
   createdAt: string;
   journeyId: string;
@@ -35,6 +36,7 @@ export interface Blog {
   imageUrl: string;
   tags: string[];
   kudos: number;
+  readLength: number;
 }
 
 interface EditorJsOutput {
