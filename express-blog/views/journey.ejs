@@ -45,8 +45,8 @@
                         <%= journey.creator.username %>
                     </a>
                     </div>
-                    <div class="journey__creator-posts">
-                    <%= journey.posts.length %> posts in this journey
+                    <div class="blog__creator-position">
+                        dev intern
                     </div>
                 </div>
             </section>
@@ -58,7 +58,7 @@
                     </button>
 
                     <button class="kudo-count" title="View kudos">
-                        42
+                        <%= journey.kudos %>
                     </button>
                 </section>
                 <section class="journey__right-btns">
@@ -74,6 +74,7 @@
                 </section>
                 
             </section>
+            <h2 class="journey__date-started"><%= journey.posts.length %> posts in this journey</h2>
             <section class="blogs__grid">
             <% if (blogs.length > 0) { %>
             <% blogs.forEach(blog => { %>

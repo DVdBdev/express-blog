@@ -1,0 +1,233 @@
+.blog {
+  display: grid;
+  grid-template-columns: 1fr 6fr;
+}
+
+.blog__main {
+  background-color: var(--base-variant);
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 20% 0 20%;
+  gap: 0;
+}
+
+.blog__hero {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 2rem;
+}
+
+.blog__cover {
+  width: 100%;
+  height: auto;
+  max-height: 550px;
+}
+
+.blog__aside {
+  background-color: var(--base-variant);
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.blog__back-journey,
+.blog__back-journey-main {
+  width: 190px;
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 500;
+  padding: 0.6rem 1rem;
+  background-color: var(--base-variant);
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  border-radius: 6px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.blog__back-journey {
+  position: sticky;
+  top: 4rem;
+  left: 2rem;
+}
+
+.blog__back-journey:hover,
+.blog__back-journey-main:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+/* Optional arrow styling */
+.back-arrow {
+  font-size: 1.3rem;
+  line-height: 1;
+}
+
+.blog__back-journey-main {
+  display: none;
+}
+
+.blog__back-journey {
+  display: inline-block;
+}
+
+.blog__title {
+  font-size: 4rem;
+  color: var(--text-color);
+}
+
+.blog__date-started {
+  font-size: 1.5rem;
+  color: var(--tertiary-text);
+  padding-top: 2rem;
+}
+
+.blog__kudos {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.blog__right-btns {
+  display: flex;
+  gap: 2rem;
+}
+
+.blog__btns {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-top: 1px solid var(--icon-color);
+  border-bottom: 1px solid var(--icon-color);
+  padding: 1.5rem 1rem;
+  margin: 1rem 0;
+}
+
+.kudo-btn,
+.kudo-count, .share-btn, .more-btn, .bookmark-btn {
+  font-size: 1.3rem;
+  font-weight: 500;
+  border-radius: 6px;
+  background-color: var(--base-variant);
+  color: var(--primary-color);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.kudo-btn:hover,
+.kudo-count:hover, .share-btn:hover, .more-btn:hover, .bookmark-btn:hover {
+  color: var(--tertiary-text);
+}
+
+.kudo-btn i, .share-btn i, .more-btn i, .bookmark-btn i {
+  color: var(--primary-color);
+  transition: color 0.2s ease;
+  font-size: 1.6rem;
+}
+
+.kudo-btn:hover i {
+  color: var(--error-color);
+}
+
+.share-btn:hover i, .more-btn:hover i, .bookmark-btn:hover i {
+  color: var(--tertiary-text);
+}
+
+.blog__creator-info {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-top: 1rem;
+}
+
+.blog__creator-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.blog__creator-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.blog__creator-username a {
+  font-weight: 600;
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.blog__creator-username a:hover {
+  text-decoration: underline;
+  color: var(--accent-color);
+}
+
+.blog__creator-position {
+  font-size: 0.9rem;
+  color: var(--secondary-text);
+}
+
+.blog__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  list-style: none;
+  padding: 0;
+}
+
+.blog__tag {
+  background-color: var(--primary-text);
+  color: var(--text-color);
+  padding: 0.4rem 0.75rem;
+  border-radius: 0.25rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.blog__tag:hover {
+  background-color: var(--primary-color);
+}
+
+@media (max-width: 1368px) {
+  .blog {
+    grid-template-columns: 1fr;
+  }
+
+  .blog__aside {
+    order: 2;
+  }
+
+  .blog__main {
+    order: 1;
+  }
+
+  .blog__back-journey-main {
+    display: inline-block;
+  }
+
+  .blog__back-journey {
+    display: none;
+  }
+
+  .blog__main {
+    padding: 4rem 4rem 4rem 4rem;
+  }
+}
+
+@media (max-width: 1000px) {
+  .blog__main {
+    padding: 4rem 2rem 4rem 2rem;
+  }
+}

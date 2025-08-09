@@ -3,10 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>View a certain blog</title>
+    <title>Home</title>
     <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/view.css">
+    <link rel="icon" type="png" href="assets/Logo.png">
+    <script src="https://kit.fontawesome.com/3046fdd1a4.js" crossorigin="anonymous"></script>
 </head>
+    <%- include("partials/header.ejs") %>
+    <main class="blog">
+        <section class="blog__aside">
+            <a href="/journeys/<%= blog.journeyId %>" class="blog__back-journey"><span class="back-arrow">←</span> Journey</a>
+        </section>
+        <section class="blog__main">
+            <a href="/journeys/<%= blog.journeyId %>" class="blog__back-journey-main"><span class="back-arrow">←</span> Journey</a>
+            <section class="blog__hero">
+                <img src="<%= blog.imageUrl %>" alt="Cover image" class="blog__cover" />
+            </section>
+            <h2 class="blog__date-started">Wrote blog on <%= blog.createdAt %></h2>
+            <h1 class="blog__title"><%= blog.title %></h1>
+            <ul class="blog__tags">
+                <% blog.tags.forEach(tag => { %>
+                    <li class="blog__tag">#<%= tag %></li>
+                <% }) %>
+            </ul>
+
+            <section class="blog__creator-info">
+                <img
+                    src="/assets/avatar.png"
+                    alt="<%= blog.author.username %>'s avatar"
+                    class="blog__creator-avatar"
+                />
+
+                <div class="blog__creator-details">
+                    <div class="blog__creator-username">
+                    <a href="/users/<%= blog.author._id %>">
+                        <%= blog.author.username %>
+                    </a>
+                    </div>
+                    <div class="blog__creator-position">
+                        dev intern
+                    </div>
+                </div>
+            </section>
+
+            <section class="blog__btns">
+                <section class="blog__kudos">               
+                    <button class="kudo-btn" title="Kudo">
+                        <i class="fa-solid fa-heart"></i>
+                    </button>
+
+                    <button class="kudo-count" title="View kudos">
+                        <%= blog.kudos %>
+                    </button>
+                </section>
+                <section class="blog__right-btns">
+                    <button class="share-btn" title="Share">
+                        <i class="fa-solid fa-arrow-up-from-bracket"></i>
+                    </button>
+                    <button class="bookmark-btn" title="Bookmark">
+                        <i class="fa-solid fa-bookmark"></i>
+                    </button>
+                    <button class="more-btn">
+                        <i class="fa-solid fa-ellipsis"></i>
+                    </button>
+                </section>
+                
+            </section>
+            <h2 class="blog__date-started"><%= blog.readLength %> min read</h2>
+            
+
+        </section>
+        
+    </main>
+    <%- include("partials/footer.ejs") %>
 <body>
-    <p>View a certain blog</p>
+    
+    
+    
 </body>
 </html>
