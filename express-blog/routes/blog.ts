@@ -1,6 +1,8 @@
 import { Router } from "express";
-import path from "path";
+import path, { parse } from "path";
 import fs from "fs";
+import edjsHTML from "editorjs-html";
+import { parseEditorJs } from "../middleware/parseEditorJs";
 
 const blogRouter = Router();
 
@@ -18,7 +20,8 @@ blogRouter.get("/:id", (req, res) => {
     if (!blog) {
         return res.status(404).send("Blog not found");
     }
-    res.render("view", { blog });
+    const parsedBlocks = parseEditorJs(blog.content);
+    res.render("view", { blog , blogContent: parsedBlocks });
 });
 
 blogRouter.get("/:id/edit", (req, res) => {

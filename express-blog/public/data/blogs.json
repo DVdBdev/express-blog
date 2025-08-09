@@ -159,6 +159,12 @@
           }
         },
         {
+          "type": "code",
+          "data": {
+            "code": "import React from 'react';\n\ninterface UserSettingsModalProps {\n  isOpen: boolean;\n  onClose: () => void;\n}\n\nconst UserSettingsModal: React.FC<UserSettingsModalProps> = ({ isOpen, onClose }) => {\n  if (!isOpen) return null;\n\n  return (\n    <div className=\"modal-overlay\">\n      <div className=\"modal-content\">\n        <h2>User Settings</h2>\n        {/* Modal content goes here */}\n        <button onClick={onClose}>Close</button>\n      </div>\n    </div>\n  );\n};\n\nexport default UserSettingsModal;"
+          }
+        },
+        {
           "type": "quote",
           "data": {
             "text": "“Naming things is still the hardest problem in computer science.”",

@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="/css/header.css">
     <link rel="stylesheet" href="/css/footer.css">
     <link rel="stylesheet" href="/css/view.css">
+    <link rel="stylesheet" href="/css/parser.css">
     <link rel="icon" type="png" href="assets/Logo.png">
     <script src="https://kit.fontawesome.com/3046fdd1a4.js" crossorigin="anonymous"></script>
 </head>
@@ -73,6 +74,9 @@
                 
             </section>
             <h2 class="blog__date-started"><%= blog.readLength %> min read</h2>
+            <div class="blog-content">
+                <%- blogContent %>
+            </div>
             
 
         </section>
