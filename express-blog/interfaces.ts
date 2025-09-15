@@ -5,41 +5,42 @@ export interface User {
   email: string;
   username: string;
   password?: string;
-  role: "ADMIN" | "USER";
+  role: "ADMIN" | "USER" | "FAKE_USER";
+  profileImage?: string;
+  bio?: string;
+  posts?: ObjectId[];
+  profileViews?: number;
+  settings?: Record<string, any>;
 }
 
 export interface Journey {
-  _id: string;
+  _id?: ObjectId;
   title: string;
   description: string;
-  creator: {
-    _id: string;
-    username: string;
-  };
-  posts: string[];
+  creatorId: ObjectId;
+  posts: ObjectId[];
   kudos: number;
   tags: string[];
   imageUrl: string;
+  createdAt?: Date;
+  updatedAt?: Date;
 }
 
 export interface Blog {
-  _id: string;
+  _id?: ObjectId;
   title: string;
   description: string;
   content: EditorJsOutput;
-  createdAt: string;
-  journeyId: string;
-  author: {
-    _id: string;
-    username: string;
-  };
+  createdAt: Date;
+  journeyId: ObjectId;
+  userId: ObjectId;
   imageUrl: string;
   tags: string[];
   kudos: number;
   readLength: number;
 }
 
-interface EditorJsOutput {
+export interface EditorJsOutput {
   time: number;
   blocks: {
     id?: string;

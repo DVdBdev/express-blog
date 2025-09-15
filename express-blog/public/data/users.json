@@ -1,0 +1,92 @@
+[
+  {
+    "email": "nicolas.ambrose@example.com",
+    "username": "happyostrich547",
+    "password": "$2b$10$UjLpTBM0UySMz76G0ECqOOBtYA/KtGC32RACU9zGCYJT0WH/30r9a",
+    "role": "FAKE_USER",
+    "profileImage": "https://randomuser.me/api/portraits/men/74.jpg",
+    "bio": "Hi, I'm Nicolas Ambrose from Canada.",
+    "profileViews": 301
+  },
+  {
+    "email": "nelson.murray@example.com",
+    "username": "blueduck650",
+    "password": "$2b$10$LGZtd4.cfb9dfk3pQYULCOM3pNn0RczJI/gWgeRIKj3dwKw0qb5rW",
+    "role": "FAKE_USER",
+    "profileImage": "https://randomuser.me/api/portraits/men/39.jpg",
+    "bio": "Hi, I'm Nelson Murray from United States.",
+    "profileViews": 245
+  },
+  {
+    "email": "suzanne.rodriguez@example.com",
+    "username": "heavybear736",
+    "password": "$2b$10$Hkz/inLTrhzZZJIB2mNHC.bKCh4R//OlqnasjzZU0xnXLJsdZ0QqK",
+    "role": "FAKE_USER",
+    "profileImage": "https://randomuser.me/api/portraits/women/47.jpg",
+    "bio": "Hi, I'm Suzanne Rodriguez from United Kingdom.",
+    "profileViews": 256
+  },
+  {
+    "email": "laura.moreno@example.com",
+    "username": "organicbutterfly648",
+    "password": "$2b$10$Pourt5m/Tl6Vp6xToJtkuukysatijn/cC1VafexN30WLU5Rf50rFG",
+    "role": "FAKE_USER",
+    "profileImage": "https://randomuser.me/api/portraits/women/73.jpg",
+    "bio": "Hi, I'm Laura Moreno from United Kingdom.",
+    "profileViews": 326
+  },
+  {
+    "email": "russell.shaw@example.com",
+    "username": "bluegorilla907",
+    "password": "$2b$10$DcdpPDbFtNuqYVAxHLpfG.qFhnTmowZKWDzMbUwKNOUasyDyNm4j.",
+    "role": "FAKE_USER",
+    "profileImage": "https://randomuser.me/api/portraits/men/63.jpg",
+    "bio": "Hi, I'm Russell Shaw from Australia.",
+    "profileViews": 126
+  },
+  {
+    "email": "camille.addy@example.com",
+    "username": "happyelephant109",
+    "password": "$2b$10$f2c/1I6Rdh6qX3cHszvYcu.WXoY/e58bkVIFwLDrFyrPCRR1ZDL5W",
+    "role": "FAKE_USER",
+    "profileImage": "https://randomuser.me/api/portraits/women/11.jpg",
+    "bio": "Hi, I'm Camille Addy from Canada.",
+    "profileViews": 452
+  },
+  {
+    "email": "priscilla.gregory@example.com",
+    "username": "heavykoala880",
+    "password": "$2b$10$Kbnobqz5p6LLc29jLjTzVeuT.U3ia6tWYMC/A2oSgwjptvv6ufWYy",
+    "role": "FAKE_USER",
+    "profileImage": "https://randomuser.me/api/portraits/women/57.jpg",
+    "bio": "Hi, I'm Priscilla Gregory from United States.",
+    "profileViews": 477
+  },
+  {
+    "email": "megan.white@example.com",
+    "username": "orangegorilla386",
+    "password": "$2b$10$bKUncm1PnfPwGvRtVVaSKOao/WksLjJIej457uFMzRa0EHKrP/r.m",
+    "role": "FAKE_USER",
+    "profileImage": "https://randomuser.me/api/portraits/women/74.jpg",
+    "bio": "Hi, I'm Megan White from Canada.",
+    "profileViews": 372
+  },
+  {
+    "email": "nelson.gray@example.com",
+    "username": "ticklishcat702",
+    "password": "$2b$10$GSaPdxWfHzhIzNTVaFpu4uNfG8D.6oeZKNNbxaYxQpCwo8GJ41N62",
+    "role": "FAKE_USER",
+    "profileImage": "https://randomuser.me/api/portraits/men/65.jpg",
+    "bio": "Hi, I'm Nelson Gray from United States.",
+    "profileViews": 412
+  },
+  {
+    "email": "kurt.gomez@example.com",
+    "username": "smallwolf969",
+    "password": "$2b$10$65rg1N5fGtvmXkDy5mZgTOP.IKHk8ZBTD43g7cn2Rjp2cxSlDHNcq",
+    "role": "FAKE_USER",
+    "profileImage": "https://randomuser.me/api/portraits/men/69.jpg",
+    "bio": "Hi, I'm Kurt Gomez from United States.",
+    "profileViews": 51
+  }
+]

@@ -1,0 +1,70 @@
+.blog-new {
+  background-color: var(--base-variant);
+  padding: 2rem;
+  border-radius: 8px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.blog-new__form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+}
+
+.blog-new__label {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
+}
+
+.blog-new__input,
+.blog-new__textarea,
+.blog-new__select {
+  padding: 0.75rem;
+  border: 1px solid var(--icon-color);
+  border-radius: 6px;
+  background-color: var(--base-color);
+  color: var(--text-color);
+  font-size: 1rem;
+}
+
+.blog-new__textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.blog-new__journey-form {
+  background-color: var(--base-color);
+  border: 1px solid var(--icon-color);
+  padding: 1rem;
+  border-radius: 6px;
+  margin-bottom: 1.5rem;
+}
+
+.blog-new__journey-form--hidden {
+  display: none;
+}
+
+.blog-new__journey-title {
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+.blog-new__btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  border: none;
+}
+
+.blog-new__btn--primary {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.blog-new__btn--primary:hover {
+  background-color: var(--primary-color-dark);
+}

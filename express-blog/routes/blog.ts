@@ -3,11 +3,15 @@ import path, { parse } from "path";
 import fs from "fs";
 import edjsHTML from "editorjs-html";
 import { parseEditorJs } from "../middleware/parseEditorJs";
+import { v4 as uuidv4 } from 'uuid';
 
 const blogRouter = Router();
 
 blogRouter.get("/new", (req, res) => {
-    res.render("new");
+    const filePath = path.join(__dirname, "../public/data/journeys.json");
+    const rawData = fs.readFileSync(filePath, "utf-8");
+    const journeys = JSON.parse(rawData);
+    res.render("new", { journeys });
 });
 
 blogRouter.get("/:id", (req, res) => {

@@ -1,12 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>New blog</title>
-    <link rel="stylesheet" href="/css/reset.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>New Blog</title>
+  <link rel="stylesheet" href="/css/reset.css" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="/css/header.css" />
+  <link rel="stylesheet" href="/css/footer.css" />
+  <link rel="stylesheet" href="/css/new.css" />
 </head>
 <body>
-    <p>New blog</p>
+  <%- include("partials/header.ejs") %>
+
+  <main class="new">
+    <div class="blog-new">
+        <form class="blog-new__form" action="/blogs" method="POST">
+            <div class="blog-new__left">
+                <!-- Blog Title -->
+                <div class="blog-new__form-group">
+                <label class="blog-new__label" for="title">Blog Title</label>
+                <input class="blog-new__input" type="text" id="title" name="title" placeholder="Enter blog title" required>
+                </div>
+
+                <!-- Journey Selector -->
+                <div class="blog-new__form-group">
+                    <label class="blog-new__label" for="journey">Select Journey</label>
+                    <select class="blog-new__select" id="journey" name="journeyId" required>
+                        <% journeys.forEach(journey => { %>
+                            <option value="<%= journey._id %>"><%= journey.title %></option>
+                        <% }) %>
+                        <option value="new">➕ Create New Journey</option>
+                    </select>
+                </div>
+
+                <!-- Hidden Inline New Journey Form -->
+                <div id="new-journey-form" class="blog-new__journey-form blog-new__journey-form--hidden">
+                <h4 class="blog-new__journey-title">Create New Journey</h4>
+                <div class="blog-new__form-group">
+                    <label class="blog-new__label" for="newJourneyTitle">Journey Title</label>
+                    <input class="blog-new__input" type="text" id="newJourneyTitle" name="newJourneyTitle" placeholder="My Awesome Journey">
+                </div>
+                <div class="blog-new__form-group">
+                    <label class="blog-new__label" for="newJourneyDescription">Description</label>
+                    <textarea class="blog-new__textarea" id="newJourneyDescription" name="newJourneyDescription" placeholder="Describe your journey..."></textarea>
+                </div>
+                </div>
+            </div>
+
+            <div class="blog-new__right">
+                <div class="blog-new__button-row">
+                    <select class="blog-new__language-select" id="language" name="language" required>
+                        <option value="en">English</option>
+                        <option value="nl">Dutch</option>
+                    </select>
+                    <button class="blog-new__preview-btn"><i class="fa-solid fa-eye"></i> Preview</button>
+                </div>
+            </div>
+            <!-- Blog Content -->
+            <div class="blog-new__form-group">
+                <label class="blog-new__label" for="content">Content</label>
+                <div id="editorjs"></div>
+            </div>  
+
+            <button class="blog-new__btn blog-new__btn--primary" type="submit">Publish Blog</button>
+        </form>
+        </div>
+
+        <script>
+            document.getElementById('journey').addEventListener('change', function() {
+                const form = document.getElementById('new-journey-form');
+                form.classList.toggle('blog-new__journey-form--hidden', this.value !== 'new');
+            });
+        </script>
+  </main>
+
+  <%- include("partials/footer.ejs") %>
+
+  <script src="https://cdn.jsdelivr.net/npm/@editorjs/editorjs@latest"></script>
+  <script>
+    const editor = new EditorJS({
+        holder: 'editorjs'
+    });
+  </script>
 </body>
 </html>
